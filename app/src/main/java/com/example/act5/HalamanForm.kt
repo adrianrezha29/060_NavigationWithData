@@ -20,8 +20,10 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -47,6 +49,12 @@ fun HalamanSatu(
             .padding(16.dp)
             .fillMaxSize()
     ){
+        Text(
+            text = "Data Pelanggan",
+            color = Color.Black,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium))
+        )
         OutlinedTextField(value = namaTxt, onValueChange = {
             namaTxt = it
         }, label = {
