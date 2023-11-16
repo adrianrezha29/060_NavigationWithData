@@ -49,5 +49,10 @@ fun HalamanSatu(
         }, label = {
             Text(text = "Alamat")
         })
+        OutlinedTextField(value = telponTxt, onValueChange = {
+            telponTxt = it
+        }, label = {
+            Text(text = "Telpon")
+        })
     }
 }
